@@ -52,7 +52,7 @@ namespace ChallengeGOIAR.Controllers
             applicationDbContext.Add(follow);
             await applicationDbContext.SaveChangesAsync();
 
-            var followerResponse = new FollowerResponseDTO() { UserId = follow.FollowerId, FollowerId = follow.FollowerId };
+            var followerResponse = new FollowerResponseDTO() { UserId = follow.ApplicationUserId, FollowerId = follow.FollowerId };
 
             return new CreatedResult("getFollower",  followerResponse);
 
