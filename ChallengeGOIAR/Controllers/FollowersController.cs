@@ -20,7 +20,7 @@ namespace ChallengeGOIAR.Controllers
             this.applicationDbContext = applicationDbContext;
             this.userManager = userManager;
         }
-
+        
         [HttpPost]
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         public async Task<ActionResult> Post([FromBody] FollowerDTO followerDTO)
